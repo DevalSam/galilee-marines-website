@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Page not found - Galilee Marines Ltd">
+    <title>404 - Page Not Found | Galilee Marines Ltd</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .error-page {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .error-content {
+            text-align: center;
+            z-index: 10;
+            position: relative;
+        }
+        
+        .error-code {
+            font-size: 150px;
+            font-weight: 800;
+            color: #003d7a;
+            line-height: 1;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .error-message {
+            font-size: 36px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        
+        .error-description {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 40px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .error-actions {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .ocean-animation {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 200px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="%23003d7a" fill-opacity="0.3"></path></svg>');
+            background-size: cover;
+            animation: wave 10s linear infinite;
+        }
+        
+        @keyframes wave {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        
+        .ship-icon {
+            position: absolute;
+            bottom: 150px;
+            right: 10%;
+            font-size: 60px;
+            color: #003d7a;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .search-section {
+            margin-top: 50px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .search-form {
+            display: flex;
+            background: white;
+            border-radius: 50px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .search-form input {
+            flex: 1;
+            padding: 15px 25px;
+            border: none;
+            font-size: 16px;
+            outline: none;
+        }
+        
+        .search-form button {
+            padding: 15px 30px;
+            background: #003d7a;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .search-form button:hover {
+            background: #002d5a;
+        }
+        
+        .quick-links {
+            margin-top: 60px;
+        }
+        
+        .quick-links h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .quick-links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .quick-link {
+            padding: 15px;
+            background: white;
+            border-radius: 10px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .quick-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .quick-link i {
+            color: #003d7a;
+        }
+    </style>
+</head>
+<body>
+    <!-- Error Page Content -->
+    <div class="error-page">
+        <div class="error-content">
+            <h1 class="error-code">404</h1>
+            <h2 class="error-message">Oops! Page Not Found</h2>
+            <p class="error-description">
+                The page you're looking for seems to have sailed away. Don't worry, we'll help you navigate back to safety.
+            </p>
+            
+            <!-- Action Buttons -->
+            <div class="error-actions">
+                <a href="index.html" class="btn-primary">
+                    <i class="fas fa-home"></i> Back to Home
+                </a>
+                <a href="contact.html" class="btn-secondary">
+                    <i class="fas fa-envelope"></i> Contact Support
+                </a>
+            </div>
+            
+            <!-- Search Section -->
+            <div class="search-section">
+                <form class="search-form" action="#" method="GET">
+                    <input type="text" placeholder="Search our website..." name="search">
+                    <button type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+            
+            <!-- Quick Links -->
+            <div class="quick-links">
+                <h3>Popular Pages</h3>
+                <div class="quick-links-grid">
+                    <a href="services.html" class="quick-link">
+                        <i class="fas fa-ship"></i>
+                        <span>Services</span>
+                    </a>
+                    <a href="projects.html" class="quick-link">
+                        <i class="fas fa-project-diagram"></i>
+                        <span>Projects</span>
+                    </a>
+                    <a href="about.html" class="quick-link">
+                        <i class="fas fa-info-circle"></i>
+                        <span>About Us</span>
+                    </a>
+                    <a href="team.html" class="quick-link">
+                        <i class="fas fa-users"></i>
+                        <span>Our Team</span>
+                    </a>
+                    <a href="locations.html" class="quick-link">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Locations</span>
+                    </a>
+                    <a href="contact.html" class="quick-link">
+                        <i class="fas fa-phone"></i>
+                        <span>Contact</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Decorative Elements -->
+        <div class="ocean-animation"></div>
+        <i class="fas fa-ship ship-icon"></i>
+    </div>
+    
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
